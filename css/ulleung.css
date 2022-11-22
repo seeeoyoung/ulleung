@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+
+* {
+	margin:0; padding:0; box-sizing:border-box;
+}
+html, body {
+	font:10pt/180% 'Noto Sans KR', sans-serif;
+	color:#333;
+}
+img{
+	display:block; max-width:100%;
+}
+a {
+	text-decoration:none; color:#333;
+}
+#layout{
+	width:1200px; margin:auto;
+}
+ /*상단*/
+ header {
+	 position:relative; display:flex;
+	 height:100px; align-items:center;
+ }
+ 
+/*로고*/
+header h1 {
+	flex:1;
+} 
+header h1 a {
+	margin-left:40px;
+}
+header h1 img {
+	display:inline;
+}
+
+/*메뉴*/
+header ul {
+	flex:1.5;
+	display:flex; list-style:none;
+} 
+header li {
+	flex:1;
+	position:relative; text-align:center; 
+} 
+
+/*메인메뉴*/
+header li> a {
+	display:block;
+	font-weight:bold; font-size:1.15rem;
+	padding:8px; color:black;
+}
+header li> a:hover {color:red;} 
+ 
+ 
+/*하위메뉴*/
+header nav {
+	position:absolute; display:none;
+	width:100%; z-index:2;
+	padding-top:20px;
+}
+header nav a {
+	display:block; color:white;
+	padding:1px;
+}
+header nav a:hover {color:aqua;} 
+ 
+ /*서브메뉴 내려올때 바탕색*/
+ header> div {
+	 position:absolute; z-index:1;
+	 width:100%; height:145px; top:80px;
+	 background:#3d63a7; display:none;
+ }
+ 
+/***슬라이드***/
+#visual {
+	position:relative; 
+}
+#visual a:not(:first-child) {
+	position:absolute; top:0; width:100%;
+}
+#visual img {width:100%;}
+
+/*******메인*******/
+main {
+	height:400px; display:flex;
+	padding-top:40px;
+}
+main> section {}
+main> section:not(:last-child) {margin-right:30px;}
+/*heading 공통*/
+main h2 { 
+    border:2px solid red;
+	display:inline-block; 
+	color:red; padding:3px 7px; font-size:1.1rem;
+	margin-bottom:20px;
+}
+
+
+/*여행꿀팁*/
+#tip {
+	flex:1;
+}
+#tip div {
+	display:flex;
+}
+#tip section {
+	flex:1;
+}
+#tip section:not(:last-child){
+	padding-right:15px;
+}
+#tip section:last-child {
+	letter-spacing:-0.7pt;
+}
+#tip h3 {
+	text-align:center; padding-top:5px;
+	font-size:1rem;
+}
+#tip h3 a:hover {
+	color:#3d63a7; text-decoration:underline;
+}
+/*VR*/
+#VR {
+	flex:0.8;
+}
+
+/*공지사항*/
+#notice {
+	flex:0.8;
+}
+#notice ul {
+	list-style:none;
+}
+#notice li {
+	padding:3px; border-bottom:1px dashed #666;
+}
+#notice span {
+	float:right;
+}
+#notice a:hover {
+	color:red;
+}
+
+
+
+/*공지사항 팝업*/
+#popup {
+	position:fixed; top:0; left:0;
+	z-index:1; width:100%; height:100vh;
+	background:rgba(0,0,0, 0.9); display:none;
+}
+#popup section {
+	background:white; width:400px; padding:20px;
+	margin:auto; margin-top:5vh; border-radius:10px;
+    padding-bottom:50px;    
+}
+#popup h3 {
+	blackground:black; color:white; text-align:center;
+	padding:5px; margin-bottom:10px;
+}
+#popup img {
+	width:100%; margin-bottom:20px;
+}
+#popup button {
+	float:right;
+}
+
+
+/**하단**/
+footer {
+	display:flex; height:100px; background:#e6e6e6;
+	color:black; padding:5px 20px; align-items:center;
+	font-size:0.9rem;
+}
+footer p {flex:1;}
+footer a {color:black;}
+footer a:hover {text-decoration:underline;}
+footer span {color:#999; padding:0 5px;}
+footer select {padding:4px 0 4px 5px;}
+
+
+
+
+
+
+
+
+
+
+
+
