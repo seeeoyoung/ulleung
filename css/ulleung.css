@@ -50,7 +50,7 @@ header li> a {
 	font-weight:bold; font-size:1.15rem;
 	padding:8px; color:black;
 }
-header li> a:hover {color:red;} 
+header li> a:hover, header li> a.act {color:red;} 
  
  
 /*하위메뉴*/
