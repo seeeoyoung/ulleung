@@ -7,10 +7,18 @@ $(document).ready(function(){
 	});
 	$("header ul").mouseleave(function(){
 	    $("header nav, header> div").stop().slideUp();	
+		$("header li> a").removeClass("act");
 	});
 	$("header .last").blur(function(){
 		$("header nav, header> div").stop().slideUp();
 	});
+	
+	//서브메뉴에 마우스를 대면 메인메뉴 활성화 된다.
+	$("header nav a").mouseenter(function(){
+		$("header li> a").removeClass("act");
+		$(this).parent().prev().addClass("act");
+	});
+	
 	
 	//비주얼 배너 페이드 슬라이드
 	setInterval(fade, 2900);
